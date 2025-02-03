@@ -1,8 +1,11 @@
-/* General Body Styles */
-body {
+/* General Styles */
+body, html {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden; /* Prevent scrolling */
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 /* Video Background */
@@ -14,68 +17,65 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter:blur(1.5px);
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Subtle shadow for text */
-    text-decoration: none;
-}
-
-.navbar-brand:hover {
-    color: #ff9800;
-    text-decoration: underline;
-}
-
-/* Header Text Styling */
-header.h4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: whitesmoke;
-    font-size: 2.5rem;
+/* Header */
+header {
+    font-size: 2rem;
     font-weight: bold;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
 }
 
-/* Add Spacing for the Showcase */
-.p_title {
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #d4af37;
-}
-
-/* Highlighted Effects */
-header::after {
-    content: '';
-    display: block;
+/* Section Styling */
+.about-section, .apod-section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
     margin: 20px auto;
-    width: 60%;
-    height: 3px;
-    background: linear-gradient(90deg, #ff9800, #ffc107, #ff9800);
+    border-radius: 10px;
+    max-width: 80%;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header.h4 {
-        font-size: 1.8rem;
-    }
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
+/* APOD Section */
+#apod-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#apod-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
 }

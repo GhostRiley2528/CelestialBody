@@ -35,6 +35,13 @@
             Join us on a journey to uncover the cosmos and see the universe in a whole new light.
 </p>
     </section>
+       <button class="btn btn-dark btn-lg btn-block" onclick="getRandomDate()">
+        Discover Random APOD image
+       </button>
+
+       <button class="btn btn-dark btn-block" onclick="initializeDatepicker()">
+        Select A Specific Date
+       </button>
 
     <section id="apod" class="apod-section text-light">
         <h2>Astronomy Picture of the Day</h2>
@@ -42,8 +49,10 @@
             <img  id="apod-image" src="#" alt="Astronomy Picture of the Day">
             <p id="apod-title"></p>
             <p id="apod-description"></p>
+            <p id="apod-date" style="font-weight: bold; margin-top: 10px;"></p>
             </div>
         </div>
+        
     </section>
     <footer class="footer text-light">
         <p>&copy; 2025 Celestial Showcase | All rights reserved.</p>
