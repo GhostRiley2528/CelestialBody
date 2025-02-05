@@ -35,6 +35,19 @@
             Join us on a journey to uncover the cosmos and see the universe in a whole new light.
 </p>
     </section>
+    <audio id="space-audio" loop autoplay>
+        <source src="Nebula Whispers.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<!-- Mute/Unmute Button -->
+<button id="toggle-sound" class="btn btn-dark" onclick="toggleMute()">🔊 Mute</button>
+
+    
+    <!-- Volume Slider -->
+    <label for="volume-slider">Volume:</label>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    
+    
        <button class="btn btn-dark btn-lg btn-block" onclick="getRandomDate()">
         Discover Random APOD image
        </button>
@@ -43,25 +56,18 @@
         Select A Specific Date
        </button>
 
-    <section id="apod" class="apod-section text-light">
+       <section id="apod" class="apod-section text-light">
         <h2>Astronomy Picture of the Day</h2>
         <div id="apod-container">
-            <img  id="apod-image" src="#" alt="Astronomy Picture of the Day">
+            <img id="apod-image" src="#" alt="Astronomy Picture of the Day">
             <p id="apod-title"></p>
             <p id="apod-description"></p>
-            <p id="apod-date" style="font-weight: bold; margin-top: 10px;"></p>
-            </div>
+            <p id="apod-date" style="font-weight: bold; margin-top: 10px;"></p> <!-- Date display -->
         </div>
-        
     </section>
+    
     <footer class="footer text-light">
         <p>&copy; 2025 Celestial Showcase | All rights reserved.</p>
-        <p>
-            Follow us: 
-            <a href="#" target="_blank">Twitter</a> | 
-            <a href="#" target="_blank">Instagram</a> | 
-            <a href="#" target="_blank">Facebook</a>
-        </p>
     </footer>
 
     </footer>

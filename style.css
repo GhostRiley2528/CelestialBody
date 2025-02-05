@@ -17,6 +17,7 @@ body, html {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    filter: blur(1.5);
 }
 
 /* Navbar */
@@ -71,6 +72,48 @@ button {
 button:hover {
     background-color: #555;
     transform: scale(1.05);
+}
+
+/* Volume Label (Styled Like Buttons) */
+label {
+    background-color: #222;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Volume Slider Styling */
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 8px;
+    background: linear-gradient(to right, #555, #999);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Slider Thumb */
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* Footer */
