@@ -19,6 +19,11 @@ body, html {
     z-index: -1;
     filter: blur(1.5);
 }
+input[type= "date"] ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+    cursor: pointer;
+}
 
 /* Navbar */
 .navbar {
@@ -36,27 +41,40 @@ header {
 /* Section Styling */
 .about-section, .apod-section {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
     margin: 20px auto;
-    border-radius: 10px;
-    max-width: 80%;
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* APOD Section */
 #apod-container {
     margin-top: 20px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
-#apod-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+@media (max-width: 576px) {
+    WapodImage {
+    min-height: 288px;
+    }
+    
+    }
+    
+    @media (min-width: 577px) and (max-width: 768px) {
+    #apodImage {
+    min-height: 300px;
+    }
 }
 
+    @media (min-width: 769px) {
+    WapodImage {
+    min-height: 480px;
+    }
+}
 /* Buttons */
 button {
     margin: 10px;
@@ -68,6 +86,28 @@ button {
     font-size: 1rem;
     transition: 0.3s;
 }
+@media (max-width: 767px) {
+    html {
+    font-size: 14px;
+    }
+}
+    @media (min-width: 768px) and (max-width: 991px) {
+    html {
+    font-size: 16px;
+    }
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+    html {
+    font-size: 18px;
+    }
+}
+    
+    @media (min-width: 1200px) {
+    html {
+    font-size: 20px;
+    }
+    }
 
 button:hover {
     background-color: #555;

@@ -31,7 +31,7 @@ function initializeDatepicker() {
 
 // Fetch APOD Data
 function fetchAPOD(date) {
-    const apiKey = "WVQIR3YoD9liNVTwBeLnlO2cPaesr4RhCP77oqBb "; // Replace with your NASA API Key
+    const apiKey = "WVQIR3YoD9liNVTwBeLnlO2cPaesr4RhCP77oqBb ";
     const url = `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${apiKey}`;
 
     fetch(url)
@@ -44,34 +44,6 @@ function fetchAPOD(date) {
         })
         .catch(error => console.error("Error fetching APOD:", error));
 }
-
-// Load a placeholder for tomorrow's APOD
-function loadTomorrowAPOD() {
-    const tomorrowTitle = "Anti-Rainbow"; // Placeholder title for tomorrow
-    document.getElementById("apod-tomorrow").textContent = `Tomorrow's Picture: ${tomorrowTitle}`;
-}
-
-// Mute/Unmute functionality
-function toggleMute() {
-    var audioElements = document.querySelectorAll('audio');
-    var button = document.getElementById('toggle-sound');
-    
-    // Check if audio is currently muted
-    var isMuted = audioElements[0].muted;
-
-    // Toggle mute/unmute for all audio elements
-    audioElements.forEach(audio => {
-        audio.muted = !isMuted;
-    });
-
-    // Update button text based on mute status
-    if (isMuted) {
-        button.innerHTML = "🔊 Unmute";  // Change button text to Unmute
-    } else {
-        button.innerHTML = "🔇 Mute";   // Change button text to Mute
-    }
-}
-
 // Volume control for audio
 document.addEventListener("DOMContentLoaded", function () {
     let audio = document.getElementById("space-audio");
